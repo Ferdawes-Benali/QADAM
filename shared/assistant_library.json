@@ -1,0 +1,95 @@
+{
+  "_doc": "Qadam verified answer library. Used (1) as grounding text for the AI assistant and (2) as the offline/no-AI fallback. Content is general diabetes self-care education adapted from IWGDF 2023 patient advice, ADA Standards of Care and IDF-DAR Ramadan guidance. Must be reviewed by a Tunisian clinician before real use; Derja text needs native-speaker review.",
+  "version": "2026-10-11",
+  "fallback": {
+    "fr": "Je n'ai pas de réponse vérifiée pour cette question. Posez-la à votre médecin ou à votre pharmacien. Je peux vous aider sur : pieds nus, chaleur, examen des pieds, ongles, chaussures, résultats Qadam, hypoglycémie, glycémie élevée, Ramadan, alimentation, activité, traitement, vos données.",
+    "ar": "ليست لديّ إجابة موثّقة لهذا السؤال. اطرحه على طبيبك أو الصيدلي. يمكنني مساعدتك في: المشي حافيًا، الحرارة، فحص القدمين، الأظافر، الأحذية، نتائج قدم، انخفاض السكر، ارتفاع السكر، رمضان، الأكل، النشاط، العلاج، بياناتك.",
+    "aeb": "ما عنديش جواب متأكد منو على هالسؤال. اسأل الطبيب ولا الفرمسيان. نجم نعاونك في: المشي حافي، السخانة، فحص الساقين، الظوافر، الصباط، نتايج قدم، السكر الهابط، السكر الطالع، رمضان، الماكلة، الحركة، الدوا، المعطيات متاعك."
+  },
+  "topics": [
+    {"id": "barefoot",
+     "keywords": {"fr": ["pieds nus", "pied nu", "nu pieds", "sans chaussure", "plage"], "ar": ["حافي", "حافيا", "حافية", "بدون حذاء", "الشاطئ"], "aeb": ["حافي", "حافيه", "بلا صباط", "البحر", "الرمله"]},
+     "answer": {
+       "fr": "Non. Avec le diabète, ne marchez jamais pieds nus, ni à la maison ni à la plage : une petite blessure peut passer inaperçue si la sensibilité est diminuée, puis s'infecter. Portez des chaussures fermées et souples, et regardez vos pieds chaque soir.",
+       "ar": "لا. مع السكري لا تمشِ حافيًا أبدًا، لا في البيت ولا على الشاطئ: قد لا تشعر بجرح صغير إذا ضعف الإحساس في قدميك ثم يتعفّن. البس حذاءً مغلقًا ومريحًا وافحص قدميك كل مساء.",
+       "aeb": "لا. بالسكر ما تمشيش حافي حتى في الدار ولا في البحر: جرح صغير تنجم ما تحسّش بيه كان الحس في ساقيك ضعيف، ومن بعد يتعفّن. البس صباط مسكّر ومرتاح فيه، وشوف ساقيك كل عشية."}},
+    {"id": "heat",
+     "keywords": {"fr": ["hammam", "kanoun", "brasero", "bouillotte", "eau chaude", "chauffage", "radiateur", "bruler", "brulure"], "ar": ["حمام", "كانون", "ماء ساخن", "مدفأه", "حرق", "احتراق"], "aeb": ["حمام", "كانون", "ماء سخون", "بوطه", "شوفاج", "تحرق", "حرقه"]},
+     "answer": {
+       "fr": "Évitez la chaleur directe sur les pieds : kanoun, bouillotte, eau très chaude, sable brûlant ou hammam trop chaud. Si la sensibilité est réduite, on peut se brûler sans le sentir. Testez l'eau avec le coude ou un thermomètre (moins de 37 °C).",
+       "ar": "تجنّب الحرارة المباشرة على القدمين: الكانون، قارورة الماء الساخن، الماء الساخن جدًا، الرمل الحارق أو الحمّام الساخن جدًا. إذا ضعف الإحساس قد تحترق دون أن تشعر. اختبر الماء بمرفقك أو بميزان حرارة (أقل من 37 درجة).",
+       "aeb": "ما تقرّبش ساقيك للسخانة: الكانون، البوطة متاع الماء السخون، الماء السخون برشا، الرملة الحامية ولا الحمّام السخون برشا. كان الحس ضعيف تنجم تتحرق وما تحسّش. جرّب الماء بمرفقك ولا بترمومتر (أقل من 37 درجة)."}},
+    {"id": "daily_check",
+     "keywords": {"fr": ["examiner", "regarder mes pieds", "verifier mes pieds", "auto-examen", "soin des pieds", "laver", "secher", "creme"], "ar": ["فحص القدم", "افحص", "غسل القدم", "العنايه بالقدم", "مرطب"], "aeb": ["نشوف ساقي", "نفحص", "نغسل ساقي", "كريمه", "نعتني"]},
+     "answer": {
+       "fr": "Chaque jour, regardez le dessus, le dessous et entre les orteils (avec un miroir ou l'aide d'un proche). Cherchez rougeur, ampoule, coupure, crevasse, zone chaude ou gonflée, changement de couleur. Lavez à l'eau tiède, séchez bien entre les orteils et hydratez la peau, mais pas entre les orteils.",
+       "ar": "كل يوم افحص أعلى القدم وأسفلها وبين الأصابع (بمرآة أو بمساعدة أحد أقاربك). ابحث عن احمرار أو فقاعة أو جرح أو تشقق أو منطقة ساخنة أو متورمة أو تغيّر في اللون. اغسل بماء فاتر، وجفّف جيدًا بين الأصابع، وضع مرطّبًا لكن ليس بين الأصابع.",
+       "aeb": "كل يوم شوف ساقك من فوق ومن تحت وبين الصوابع (بمراية ولا بعاونة واحد من العايلة). ثبّت كان فما حمورية، فقاعة، جرح، تشقيق، بلاصة سخونة ولا منفوخة، ولا لون تبدّل. اغسل بماء دافي، نشّف مليح بين الصوابع، وحط كريمة أما موش بين الصوابع."}},
+    {"id": "nails",
+     "keywords": {"fr": ["ongle", "ongles", "cor", "cors", "durillon", "callosite", "podologue"], "ar": ["اظافر", "ظفر", "مسمار القدم", "جلد سميك"], "aeb": ["ظوافر", "ظفر", "كور", "جلده شايحه"]},
+     "answer": {
+       "fr": "Coupez les ongles droits, pas trop courts, et limez les angles. Ne coupez jamais vous-même les cors ou durillons et n'utilisez pas de coricides : demandez un podologue ou votre médecin.",
+       "ar": "قصّ الأظافر بشكل مستقيم وليس قصيرًا جدًا، وابرد الزوايا. لا تقطع مسامير القدم أو الجلد السميك بنفسك ولا تستعمل مزيلات المسامير: اطلب مختصًا في القدم أو طبيبك.",
+       "aeb": "قص الظوافر طول وموش قصار برشا، وبرّد الجناب. ما تقصّش الكور ولا الجلدة الشايحة بروحك وما تستعملش دواء الكور: اسأل الپوديولوغ ولا الطبيب متاعك."}},
+    {"id": "shoes",
+     "keywords": {"fr": ["chaussure", "chaussures", "chaussette", "chaussettes", "sandale", "basket"], "ar": ["حذاء", "احذيه", "جوارب", "صندل"], "aeb": ["صباط", "كلاسط", "شلاكه", "سبادري"]},
+     "answer": {
+       "fr": "Choisissez des chaussures fermées, souples et assez larges, achetées en fin de journée. Passez la main à l'intérieur avant de les mettre (caillou, couture). Portez des chaussettes sans élastique serré, changées chaque jour.",
+       "ar": "اختر حذاءً مغلقًا ولينًا وواسعًا بما يكفي، واشترِه في آخر النهار. مرّر يدك داخله قبل لبسه (حصاة، خياطة). البس جوارب بلا مطاط ضاغط وبدّلها كل يوم.",
+       "aeb": "اختار صباط مسكّر، رطب وواسع شوية، واشريه في آخر النهار. قبل ما تلبسو عدّي يدك من داخل (حجرة، خياطة). البس كلاسط ما تشدّش وبدّلها كل يوم."}},
+    {"id": "qadam_result",
+     "keywords": {"fr": ["temperature", "difference", "orange", "rouge", "resultat", "scan", "tapis", "2,2", "2.2", "qadam"], "ar": ["حراره القدم", "الفرق", "برتقالي", "احمر", "نتيجه", "فحص", "البساط", "قدم"], "aeb": ["السخانه في ساقي", "الفرق", "برتقالي", "احمر", "النتيجه", "الفحص", "الزربيه", "قدم"]},
+     "answer": {
+       "fr": "Qadam compare la température du même point sous le pied gauche et le pied droit. Une différence de 2,2 °C ou plus peut signaler une inflammation avant qu'une plaie n'apparaisse. Une seule fois : orange, à surveiller, refaites un scan demain. Deux jours de suite au même endroit : rouge, contactez votre médecin. C'est une aide au dépistage, pas un diagnostic.",
+       "ar": "يقارن قدم حرارة النقطة نفسها تحت القدم اليسرى واليمنى. فرق 2.2 درجة أو أكثر قد يدل على التهاب قبل ظهور الجرح. مرة واحدة: برتقالي، راقب وأعد الفحص غدًا. يومان متتاليان في المكان نفسه: أحمر، اتصل بطبيبك. هذه أداة مساعدة للكشف وليست تشخيصًا.",
+       "aeb": "قدم يقارن السخانة في نفس البلاصة تحت الساق اليسار واليمين. كان الفرق 2.2 درجة ولا أكثر، ينجم يكون التهاب قبل ما يبان الجرح. مرة وحدة: برتقالي، رد بالك وعاود الفحص غدوة. نهارين ورا بعضهم في نفس البلاصة: أحمر، كلّم الطبيب. هذا يعاونك تكشف بكري، موش تشخيص."}},
+    {"id": "hypo",
+     "keywords": {"fr": ["hypo", "hypoglycemie", "sucre bas", "glycemie basse", "0,6", "0.6", "tremble", "sueur"], "ar": ["انخفاض السكر", "هبوط السكر", "السكر منخفض", "رعشه", "عرق"], "aeb": ["السكر هبط", "السكر هابط", "نرعش", "نعرق"]},
+     "answer": {
+       "fr": "En dessous de 0,70 g/L : prenez 15 g de sucre rapide (3 morceaux de sucre ou un demi-verre de jus), attendez 15 minutes et recontrôlez. Si c'est toujours bas, recommencez, puis mangez un repas ou une collation. Si la personne est confuse ou perd connaissance : appelez le 190 et ne lui donnez rien à boire.",
+       "ar": "إذا كان السكر أقل من 0.70 غ/ل: تناول 15 غ من السكر السريع (3 قطع سكر أو نصف كأس عصير)، انتظر 15 دقيقة وأعد القياس. إذا بقي منخفضًا أعد ذلك ثم تناول وجبة أو لمجة. إذا كان الشخص مرتبكًا أو فقد الوعي: اتصل بالرقم 190 ولا تعطه شيئًا ليشربه.",
+       "aeb": "كان السكر تحت 0.70 غ/ل: كول 15 غرام سكر (3 قطع سكر ولا نص كاس عصير)، استنى ربع ساعة وعاود قيس. كان مازال هابط عاود، ومن بعد كول حاجة. كان الواحد مخلوط ولا طاح وما عادش يفيق: كلّم 190 وما تشرّبوش حتى شي."}},
+    {"id": "hyper",
+     "keywords": {"fr": ["hyper", "glycemie haute", "sucre eleve", "trop de sucre", "3 g", "soif"], "ar": ["ارتفاع السكر", "السكر مرتفع", "عطش"], "aeb": ["السكر طالع", "السكر طلع", "عطشان"]},
+     "answer": {
+       "fr": "Une glycémie élevée isolée n'est pas une urgence. Mais si elle dépasse 2,50 g/L plusieurs fois, ou s'accompagne d'une soif intense, de vomissements ou d'une grande fatigue, contactez rapidement votre médecin. Buvez de l'eau et ne modifiez pas votre traitement sans avis médical.",
+       "ar": "ارتفاع السكر مرة واحدة ليس حالة طارئة. لكن إذا تجاوز 2.50 غ/ل عدة مرات أو صاحبه عطش شديد أو قيء أو تعب كبير، اتصل بطبيبك بسرعة. اشرب الماء ولا تغيّر علاجك دون رأي الطبيب.",
+       "aeb": "السكر طالع مرة وحدة موش خطر. أما كان فوق 2.50 غ/ل برشا مرات، ولا معاه عطش كبير، ترجيع ولا تعب برشا، كلّم الطبيب فيسع. اشرب الماء وما تبدّلش الدوا بلا رأي الطبيب."}},
+    {"id": "ramadan",
+     "keywords": {"fr": ["ramadan", "jeune", "jeuner", "rompre le jeune", "iftar", "shour"], "ar": ["رمضان", "الصيام", "صيام", "صائم", "الافطار", "السحور"], "aeb": ["رمضان", "نصوم", "صايم", "الفطور", "السحور"]},
+     "answer": {
+       "fr": "Avant le Ramadan, parlez-en à votre médecin : selon votre traitement (insuline, certains comprimés), le jeûne peut être risqué ou demander d'adapter horaires et doses. Pendant le jeûne, rompez-le si la glycémie est sous 0,70 g/L ou au-dessus de 3,00 g/L, ou si vous vous sentez mal.",
+       "ar": "قبل رمضان تحدّث مع طبيبك: حسب علاجك (الأنسولين أو بعض الحبوب) قد يكون الصيام خطيرًا أو يتطلب تعديل المواعيد والجرعات. أثناء الصيام أفطر إذا كان السكر أقل من 0.70 غ/ل أو أكثر من 3.00 غ/ل، أو إذا شعرت بتعب.",
+       "aeb": "قبل رمضان احكي مع الطبيب متاعك: حسب الدوا (الأنسولين ولا بعض الحبوب) الصيام ينجم يكون خطر ولا لازم تبدّل الوقت والدوز. وانت صايم، افطر كان السكر تحت 0.70 غ/ل ولا فوق 3.00 غ/ل، ولا كان حسّيت روحك موش لاباس."}},
+    {"id": "food",
+     "keywords": {"fr": ["manger", "alimentation", "regime", "pain", "couscous", "pates", "fruit", "dattes", "huile", "boisson", "jus"], "ar": ["الاكل", "غذاء", "حميه", "خبز", "كسكسي", "معكرونه", "فواكه", "تمر", "عصير"], "aeb": ["ناكل", "الماكله", "ريجيم", "خبز", "كسكسي", "مقرونه", "غله", "تمر", "عصير"]},
+     "answer": {
+       "fr": "Privilégiez les légumes, les légumineuses (pois chiches, lentilles), le pain complet en petite quantité et l'huile d'olive avec modération. Limitez boissons sucrées, jus, pâtisseries et grandes portions de pain blanc, couscous ou pâtes. Répartissez les féculents sur la journée. Une diététicienne peut adapter cela à vos habitudes.",
+       "ar": "أكثر من الخضر والبقول (الحمص والعدس)، وتناول الخبز الكامل بكمية قليلة وزيت الزيتون باعتدال. قلّل المشروبات السكرية والعصير والحلويات والكميات الكبيرة من الخبز الأبيض والكسكسي والمعكرونة. وزّع النشويات على اليوم. يمكن لأخصائي التغذية أن يكيّف ذلك مع عاداتك.",
+       "aeb": "كول برشا خضرة وقطانية (حمص، عدس)، خبز كامل شوية، وزيت زيتونة بقدّو. نقّص من المشروبات بالسكر، العصير، الحلو، والصحون الكبار متاع الخبز الأبيض، الكسكسي ولا المقرونة. فرّق النشويات على النهار. أخصائي التغذية ينجم يعاونك حسب عاداتك."}},
+    {"id": "activity",
+     "keywords": {"fr": ["marcher", "marche", "sport", "exercice", "activite"], "ar": ["المشي", "رياضه", "تمارين", "نشاط"], "aeb": ["نمشي", "مشي", "سبور", "رياضه", "نتحرك"]},
+     "answer": {
+       "fr": "Marcher environ 30 minutes la plupart des jours aide à baisser la glycémie. Portez de bonnes chaussures, regardez vos pieds après la marche, et gardez du sucre sur vous si vous êtes sous insuline ou certains comprimés. Si vous avez une plaie au pied, demandez d'abord l'avis de votre médecin.",
+       "ar": "المشي نحو 30 دقيقة في أغلب الأيام يساعد على خفض السكر. البس حذاءً جيدًا، وافحص قدميك بعد المشي، واحمل معك سكرًا إذا كنت تستعمل الأنسولين أو بعض الحبوب. إذا كان في قدمك جرح، اسأل طبيبك أولًا.",
+       "aeb": "امشي قريب نص ساعة أغلب النهارات، يعاون باش يهبط السكر. البس صباط باهي، شوف ساقيك بعد المشي، وهز معاك سكر كان تاخو أنسولين ولا بعض الحبوب. كان في ساقك جرح، اسأل الطبيب قبل."}},
+    {"id": "treatment_change",
+     "keywords": {"fr": ["doubler", "dose", "insuline", "arreter mon traitement", "arreter les medicaments", "augmenter", "diminuer", "metformine", "comprime"], "ar": ["الجرعه", "انسولين", "الانسولين", "اوقف الدواء", "ازيد الدواء", "انقص الدواء", "حبوب"], "aeb": ["الدوز", "انسولين", "الانسولين", "نحبس الدوا", "نزيد الدوا", "ننقص الدوا", "الحبوب", "الابره"]},
+     "answer": {
+       "fr": "Je ne peux pas modifier un traitement. Ne changez jamais une dose d'insuline ou de comprimés sans votre médecin. Notez vos glycémies dans Qadam et montrez le rapport à votre médecin : c'est lui qui décide s'il faut ajuster.",
+       "ar": "لا يمكنني تغيير العلاج. لا تغيّر أبدًا جرعة الأنسولين أو الحبوب دون طبيبك. سجّل قياسات السكر في قدم وأرِ التقرير لطبيبك: هو من يقرّر إن كان يجب التعديل.",
+       "aeb": "ما نجمش نبدّل الدوا. ما تبدّلش الدوز متاع الأنسولين ولا الحبوب بلا الطبيب. سجّل السكر في قدم ووري التقرير للطبيب: هو اللي يقرر كان لازم يبدّل."}},
+    {"id": "privacy",
+     "keywords": {"fr": ["donnees", "confidentialite", "qui voit", "partage", "effacer", "supprimer mes"], "ar": ["بياناتي", "الخصوصيه", "من يرى", "مشاركه", "حذف"], "aeb": ["المعطيات", "شكون يشوف", "الخصوصيه", "نفسخ", "نمسح"]},
+     "answer": {
+       "fr": "Vos données restent sur votre téléphone, chiffrées. Elles ne sont partagées avec votre équipe soignante que si vous l'avez accepté, sous un code patient sans votre nom. Vous pouvez tout exporter ou effacer dans Réglages.",
+       "ar": "تبقى بياناتك على هاتفك مشفّرة. لا تُشارك مع فريقك الطبي إلا إذا وافقت على ذلك، وتحت رمز مريض بدون اسمك. يمكنك تصدير كل شيء أو حذفه من الإعدادات.",
+       "aeb": "المعطيات متاعك تقعد في تليفونك ومشفّرة. ما تتبعثش للطبيب كان كي توافق، وبكود موش باسمك. تنجم تصدّر كل شي ولا تفسخو من الإعدادات."}},
+    {"id": "targets",
+     "keywords": {"fr": ["objectif", "normale", "cible", "taux normal", "a jeun", "apres repas"], "ar": ["المعدل الطبيعي", "الهدف", "على الريق", "بعد الاكل"], "aeb": ["قداش لازم", "النورمال", "على الريق", "بعد الماكله"]},
+     "answer": {
+       "fr": "Repères par défaut, à personnaliser avec votre médecin : à jeun 0,80 à 1,30 g/L ; deux heures après le repas, moins de 1,80 g/L. En dessous de 0,70 g/L, c'est une hypoglycémie.",
+       "ar": "قيم مرجعية افتراضية يحدّدها معك طبيبك: على الريق من 0.80 إلى 1.30 غ/ل، وبعد الأكل بساعتين أقل من 1.80 غ/ل. أقل من 0.70 غ/ل يعني انخفاض السكر.",
+       "aeb": "أرقام عامة، الطبيب يحددها معاك: على الريق من 0.80 حتى 1.30 غ/ل، وبعد الماكلة بساعتين أقل من 1.80 غ/ل. تحت 0.70 غ/ل معناها السكر هابط."}}
+  ]
+}

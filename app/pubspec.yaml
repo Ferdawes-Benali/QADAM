@@ -1,0 +1,49 @@
+name: qadam_app
+description: "Qadam — diabetes companion with early diabetic-foot warning (HackCure prototype)."
+publish_to: 'none'
+version: 1.0.0+2
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  provider: ^6.1.5+1        # state management (ChangeNotifier)
+  mqtt_client: ^10.12.0     # live frames from the mat via the laptop broker
+  http: ^1.6.0              # care-team hub REST API (pairing, sync, assistant)
+  hive: ^2.2.3              # local storage, AES-256 encrypted boxes
+  hive_flutter: ^1.1.0
+  crypto: ^3.0.6            # PBKDF2-HMAC-SHA256 key derivation from the PIN
+  fl_chart: ^1.2.0          # charts
+  url_launcher: ^6.3.3      # phone calls, WhatsApp pre-filled messages
+  pdf: ^3.13.1              # doctor report
+  printing: ^5.15.1
+  audioplayers: ^6.8.1      # optional Derja voice clips
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/
+    - assets/brand/
+    - assets/data/
+    - assets/fonts/
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/Rubik-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Rubik-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Rubik-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Rubik-Bold.ttf
+          weight: 700

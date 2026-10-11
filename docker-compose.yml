@@ -1,0 +1,26 @@
+# Self-contained demo stack (cahier des charges §9: environnement conteneurisé autonome + base de test locale).
+#   docker compose up --build        -> dashboard http://localhost:8000 , MQTT broker localhost:1883
+# The serial bridge runs on the host (USB/COM ports are not reachable from Docker Desktop on Windows):
+#   python bridge/qadam_bridge.py --port COM5      or      --simulate
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    ports: ["1883:1883"]
+    volumes:
+      - ./broker/mosquitto.conf:/mosquitto/config/mosquitto.conf:ro
+    restart: unless-stopped
+  hub:
+    build: { context: ., dockerfile: hub/Dockerfile }
+    depends_on: [mosquitto]
+    ports: ["8000:8000"]
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      QADAM_MQTT_HOST: mosquitto
+      QADAM_EMBEDDED_BROKER: "0"
+    volumes:
+      - qadam-data:/data
+    restart: unless-stopped
+volumes:
+  qadam-data:

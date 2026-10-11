@@ -22,3 +22,13 @@ key.properties
 # OS
 .DS_Store
 Thumbs.db
+
+# Hub runtime data (database, generated encryption key, certificates)
+hub/data/
+*.db
+*.db-wal
+*.db-shm
+.data_key
+certs/
+*.pem
+*.key

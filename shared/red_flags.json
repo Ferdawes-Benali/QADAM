@@ -1,0 +1,33 @@
+{
+  "_doc": "Deterministic red-flag triage, checked BEFORE any AI call (hub/qadam_hub/safety.py and app/lib/services/safety_service.dart). Keywords are matched on normalised text (lower-case, accents and Arabic diacritics removed, alef/ta-marbuta/ya unified). Conservative by design: a false positive shows a care message, a false negative could delay care. Derja wording needs native-speaker and clinician review.",
+  "tiers": {
+    "emergency": {
+      "fr": "Ceci peut être une urgence. Appelez le SAMU au 190 maintenant ou faites-vous conduire aux urgences. Ne restez pas seul(e).",
+      "ar": "قد تكون هذه حالة طارئة. اتصل بالإسعاف على الرقم 190 الآن أو توجّه إلى قسم الاستعجالي. لا تبقَ وحدك.",
+      "aeb": "هذي تنجم تكون حالة خطيرة. كلّم 190 توّا ولا خلّي حد يهزّك للاستعجالي. ما تقعدش وحدك."
+    },
+    "urgent": {
+      "fr": "Ce signe doit être vu par un médecin aujourd'hui. Évitez de marcher sur ce pied, ne mettez rien dessus et contactez votre médecin ou les urgences. Si vous avez de la fièvre ou vous sentez très mal : 190.",
+      "ar": "هذه العلامة يجب أن يراها الطبيب اليوم. تجنّب المشي على هذه القدم ولا تضع عليها شيئًا، واتصل بطبيبك أو توجّه إلى الاستعجالي. إذا كانت لديك حمّى أو شعرت بتعب شديد: 190.",
+      "aeb": "هالعلامة لازم يشوفها طبيب اليوم. ما تمشيش برشا على الساق هاذي، ما تحط عليها حتى شي، وكلّم الطبيب ولا امشي للاستعجالي. كان عندك حمّى ولا حاسس روحك تعبان برشا: 190."
+    }
+  },
+  "rules": [
+    {"id": "chest_pain", "tier": "emergency",
+     "keywords": ["douleur poitrine", "douleur dans la poitrine", "mal a la poitrine", "serre la poitrine", "chest pain", "الم في الصدر", "الم بالصدر", "وجيعه في صدري", "صدري يوجع", "صدري يوجعني"]},
+    {"id": "unconscious_or_confused", "tier": "emergency",
+     "keywords": ["evanoui", "perdu connaissance", "inconscient", "confus", "ne repond pas", "convulsion", "faint", "unconscious", "fainted", "اغماء", "فقد الوعي", "مغمى عليه", "تشنج", "طاح وما فاقش", "ما يفيقش", "مخلوط", "دايخ برشا"]},
+    {"id": "breathing", "tier": "emergency",
+     "keywords": ["du mal a respirer", "essouffle", "ne peux pas respirer", "can't breathe", "ضيق في التنفس", "صعوبه في التنفس", "ما نجمش نتنفس", "نفسي مقطوع"]},
+    {"id": "foot_wound", "tier": "urgent",
+     "keywords": ["plaie", "blessure au pied", "ulcere", "ampoule qui saigne", "coupure au pied", "wound", "ulcer", "جرح", "قرحه", "مجروح", "تجرحت"]},
+    {"id": "foot_black", "tier": "urgent",
+     "keywords": ["orteil noir", "pied noir", "doigt de pied noir", "devenu noir", "noirci", "necrose", "black toe", "black foot", "اسود", "اسودت", "كحل", "كحلت", "ولات كحله"]},
+    {"id": "infection_signs", "tier": "urgent",
+     "keywords": ["pus", "odeur", "sent mauvais", "pue", "smell", "صديد", "قيح", "رائحه كريهه", "ريحه خايبه", "خانز", "خانزه", "فيه الصديد"]},
+    {"id": "fever", "tier": "urgent",
+     "keywords": ["fievre", "fever", "عندي حمى", "حراره مرتفعه", "عندي سخانه", "سخانه في بدني", "بدني سخون"]},
+    {"id": "red_hot_swollen", "tier": "urgent",
+     "keywords": ["pied gonfle", "gonfle et rouge", "rouge et gonfle", "pied rouge et chaud", "swollen foot", "قدمي متورمه", "متورم", "منفوخه", "ساقي منفوخه", "ساقي محمره"]}
+  ]
+}
