@@ -21,8 +21,8 @@ Qadam turns that signal into a daily 10-second habit and a clinical workflow:
 ## 2. Architecture
 
 ```
- DHT22 L ─┐                 USB serial                MQTT (QoS1)              REST / JSON
- DHT22 R ─┴─ Arduino Uno ── $QDM,...*CRC ──► bridge ──► broker ──┬──► Hub (FastAPI) ──► clinician dashboard (web)
+ DS18B20 L ─┐                 USB serial                MQTT (QoS1)              REST / JSON
+ DS18B20 R ─┴─ Arduino Uno ── $QDM,...*CRC ──► bridge ──► broker ──┬──► Hub (FastAPI) ──► clinician dashboard (web)
                            (no clinical       (CRC,       :1883   │     ├ rule re-check, alerts, audit (SQLite)
                             decision)          source              │     ├ FHIR R4 export
                                                label)              │     └ AI proxy (Gemini key server-side)
